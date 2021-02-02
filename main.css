@@ -1,0 +1,26 @@
+.result-breakdown {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.result-breakdown-check {
+    display: flex;
+    justify-content: left;
+}
+
+.breakdown-section {
+    border: 1px black solid;
+    width:25px;
+    height: 25px;
+    margin:1px;
+    display:flex;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    /* flex-grow:1;
+    flex-basis:0; */
+    transition:all;
+    transition-duration: 0.5ms;
+}
+
