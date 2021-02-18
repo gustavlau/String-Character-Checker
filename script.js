@@ -15,7 +15,7 @@ const columnResults = checkIfCapital();
 
 //function that runs all the checks and creates elements to appear on screen
 function displayResults(){
-        for (i=0; i < textBox.value.length; i++){
+    for (i=0; i < textBox.value.length; i++){
         let regexCheck = regex.test(textBox.value[i]);
         let cloneDiv =document.createElement("div");
         resultBreakdown.appendChild(cloneDiv);
@@ -26,16 +26,17 @@ function displayResults(){
         cloneDiv.appendChild(createDiv2);
         createDiv.classList.add("breakdown-section");
         createDiv.innerHTML = textBox.value[i];
+
         if (textBox.value.charAt([i]).toUpperCase()===textBox.value.charAt([i]) && textBox.value[i].indexOf(' ') != 0 && isNaN(textBox.value[i]) && !regexCheck){
-            createDiv2.innerHTML="<--- I'm a capital letter!";
-        }else if (textBox.value.charAt([i]).toUpperCase()!=textBox.value.charAt([i]) && textBox.value[i].indexOf(' ') != 0 && isNaN(textBox.value[i]) && !regexCheck){
-            createDiv2.innerHTML="<--- I'm not a capital letter :(";
+            createDiv2.innerHTML = "<--- I'm a capital letter!";
+        } else if (textBox.value.charAt([i]).toUpperCase()!=textBox.value.charAt([i]) && textBox.value[i].indexOf(' ') != 0 && isNaN(textBox.value[i]) && !regexCheck){
+            createDiv2.innerHTML = "<--- I'm not a capital letter :(";
         } else if (textBox.value[i].indexOf(' ') >= 0){
-            createDiv2.innerHTML= "<--- I'm a blank space :o";
+            createDiv2.innerHTML = "<--- I'm a blank space :o";
         } else if(textBox.value[i] != NaN && !regexCheck){
-            createDiv2.innerHTML= "<--- I'm a number";
+            createDiv2.innerHTML = "<--- I'm a number";
         } else if(regexCheck){
-            createDiv2.innerHTML= "<--- I am a special character";
+            createDiv2.innerHTML = "<--- I'm a special character";
         }
     }
 }
